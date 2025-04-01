@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - Daraz Clone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+  <!-- Include Header -->
+  <div id="header"></div>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-6">
+    <div class="flex flex-col lg:flex-row gap-6">
+      <!-- Cart Items -->
+      <div class="lg:w-2/3">
+        <div class="bg-white rounded-lg shadow p-6 mb-4">
+          <h2 class="text-xl font-bold mb-6">My Shopping Cart (3 Items)</h2>
+          
+          <!-- Cart Item 1 -->
+          <div class="flex flex-col sm:flex-row border-b border-gray-200 pb-6 mb-6">
+            <div class="sm:w-1/4 mb-4 sm:mb-0">
+              <img src="https://images.pexels.com/photos/341523/pexels-photo-341523.jpeg" 
+                   alt="Xiaomi Redmi Note 10 Pro" 
+                   class="w-full h-32 object-contain">
+            </div>
+            <div class="sm:w-3/4 sm:pl-4">
+              <div class="flex justify-between">
+                <h3 class="font-medium text-gray-800">Xiaomi Redmi Note 10 Pro (6GB/128GB)</h3>
+                <button class="text-gray-500 hover:text-red-500">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+              <p class="text-gray-500 text-sm mb-2">Color: Onyx Gray</p>
+              
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between">
+                <!-- Quantity Selector -->
+                <div class="flex items-center mb-2 sm:mb-0">
+                  <button class="w-8 h-8 border border-gray-300 rounded-l flex items-center justify-center">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <input type="number" value="1" min="1" 
+                         class="w-12 h-8 border-t border-b border-gray-300 text-center">
+                  <button class="w-8 h-8 border border-gray-300 rounded-r flex items-center justify-center">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                </div>
+                
+                <!-- Price -->
+                <div class="text-right">
+                  <span class="text-lg font-bold text-[#F57224]">৳24,999</span>
+                  <span class="text-sm text-gray-500 line-through ml-2">৳29,999</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cart Item 2 -->
+          <div class="flex flex-col sm:flex-row border-b border-gray-200 pb-6 mb-6">
+            <div class="sm:w-1/4 mb-4 sm:mb-0">
+              <img src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg" 
+                   alt="Wireless Headphones" 
+                   class="w-full h-32 object-contain">
+            </div>
+            <div class="sm:w-3/4 sm:pl-4">
+              <div class="flex justify-between">
+                <h3 class="font-medium text-gray-800">Wireless Bluetooth Headphones</h3>
+                <button class="text-gray-500 hover:text-red-500">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+              <p class="text-gray-500 text-sm mb-2">Color: Black</p>
+              
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between">
+                <!-- Quantity Selector -->
+                <div class="flex items-center mb-2 sm:mb-0">
+                  <button class="w-8 h-8 border border-gray-300 rounded-l flex items-center justify-center">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <input type="number" value="1" min="1" 
+                         class="w-12 h-8 border-t border-b border-gray-300 text-center">
+                  <button class="w-8 h-8 border border-gray-300 rounded-r flex items-center justify-center">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                </div>
+                
+                <!-- Price -->
+                <div class="text-right">
+                  <span class="text-lg font-bold text-[#F57224]">৳2,499</span>
+                  <span class="text-sm text-gray-500 line-through ml-2">৳2,999</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cart Item 3 -->
+          <div class="flex flex-col sm:flex-row pb-6">
+            <div class="sm:w-1/4 mb-4 sm:mb-0">
+              <img src="https://images.pexels.com/photos/1036857/pexels-photo-1036857.jpeg" 
+                   alt="Smart Watch" 
+                   class="w-full h-32 object-contain">
+            </div>
+            <div class="sm:w-3/4 sm:pl-4">
+              <div class="flex justify-between">
+                <h3 class="font-medium text-gray-800">Smart Watch 3 - Fitness Tracker</h3>
+                <button class="text-gray-500 hover:text-red-500">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+              <p class="text-gray-500 text-sm mb-2">Color: Midnight Black</p>
+              
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between">
+                <!-- Quantity Selector -->
+                <div class="flex items-center mb-2 sm:mb-0">
+                  <button class="w-8 h-8 border border-gray-300 rounded-l flex items-center justify-center">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <input type="number" value="1" min="1" 
+                         class="w-12 h-8 border-t border-b border-gray-300 text-center">
+                  <button class="w-8 h-8 border border-gray-300 rounded-r flex items-center justify-center">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                </div>
+                
+                <!-- Price -->
+                <div class="text-right">
+                  <span class="text-lg font-bold text-[#F57224]">৳3,999</span>
+                  <span class="text-sm text-gray-500 line-through ml-2">৳5,699</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Delivery Options -->
+        <div class="bg-white rounded-lg shadow p-6 mb-4">
+          <h3 class="font-bold text-lg mb-4">Delivery Options</h3>
+          <div class="space-y-4">
+            <label class="flex items-start p-3 border rounded-lg hover:border-[#F57224]">
+              <input type="radio" name="delivery" checked class="mt-1 mr-3">
+              <div>
+                <p class="font-medium">Standard Delivery</p>
+                <p class="text-sm text-gray-600">Free - Delivery by Tomorrow</p>
+              </div>
+            </label>
+            <label class="flex items-start p-3 border rounded-lg hover:border-[#F57224]">
+              <input type="radio" name="delivery" class="mt-1 mr-3">
+              <div>
+                <p class="font-medium">Express Delivery</p>
+                <p class="text-sm text-gray-600">৳100 - Delivery Today (Before 9PM)</p>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Order Summary -->
+      <div class="lg:w-1/3">
+        <div class="bg-white rounded-lg shadow p-6 sticky top-4">
+          <h3 class="font-bold text-lg mb-4">Order Summary</h3>
+          
+          <div class="space-y-3 mb-6">
+            <div class="flex justify-between">
+              <span>Subtotal (3 items)</span>
+              <span>৳31,497</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Delivery Fee</span>
+              <span class="text-green-600">Free</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Discount</span>
+              <span class="text-green-600">-৳5,200</span>
+            </div>
+          </div>
+
+          <div class="border-t border-gray-200 pt-4 mb-6">
+            <div class="flex justify-between font-bold text-lg">
+              <span>Total</span>
+              <span>৳26,297</span>
+            </div>
+            <p class="text-sm text-gray-500 mt-1">Inclusive of all taxes</p>
+          </div>
+
+          <button class="w-full bg-[#F57224] hover:bg-orange-600 text-white py-3 px-6 rounded-lg font-bold mb-4">
+            Proceed to Checkout
+          </button>
+
+          <div class="text-sm text-gray-500">
+            <p class="mb-2"><i class="fas fa-shield-alt text-gray-400 mr-2"></i> Secure Payment</p>
+            <p><i class="fas fa-undo text-gray-400 mr-2"></i> Easy Returns & Refunds</p>
+          </div>
+        </div>
+
+        <!-- Promo Code -->
+        <div class="bg-white rounded-lg shadow p-6 mt-4">
+          <h3 class="font-bold text-lg mb-4">Apply Promo Code</h3>
+          <div class="flex">
+            <input type="text" placeholder="Enter promo code" 
+                   class="flex-1 border border-gray-300 rounded-l-lg px-4 py-2 focus:outline-none">
+            <button class="bg-gray-800 text-white px-4 py-2 rounded-r-lg hover:bg-gray-700">
+              Apply
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Include Footer -->
+  <div id="footer"></div>
+
+  <!-- JavaScript to load header and footer -->
+  <script>
+    // Load header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+
+    // Load footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
