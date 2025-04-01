@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Approval - Daraz Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+  <!-- Admin Header -->
+  <header class="bg-[#F57224] text-white sticky top-0 z-50 shadow-md">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <a href="index.html" class="text-2xl font-bold">Daraz Admin</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="#" class="hover:text-yellow-200">
+            <i class="fas fa-bell"></i>
+          </a>
+          <a href="#" class="hover:text-yellow-200">
+            <i class="fas fa-user-circle"></i>
+          </a>
+          <a href="login.html" class="hover:text-yellow-200">
+            <i class="fas fa-sign-out-alt"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="flex">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow h-screen sticky top-16">
+      <nav class="p-4">
+        <ul class="space-y-2">
+          <li>
+            <a href="admin-dashboard.html" class="flex items-center p-2 text-gray-600 hover:bg-orange-50 rounded-lg">
+              <i class="fas fa-tachometer-alt mr-3"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="user-management.html" class="flex items-center p-2 text-gray-600 hover:bg-orange-50 rounded-lg">
+              <i class="fas fa-users mr-3"></i>
+              <span>User Management</span>
+            </a>
+          </li>
+          <li>
+            <a href="product-approval.html" class="flex items-center p-2 text-[#F57224] bg-orange-50 rounded-lg">
+              <i class="fas fa-check-circle mr-3"></i>
+              <span>Product Approval</span>
+            </a>
+          </li>
+          <li>
+            <a href="system-settings.html" class="flex items-center p-2 text-gray-600 hover:bg-orange-50 rounded-lg">
+              <i class="fas fa-cog mr-3"></i>
+              <span>System Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="analytics.html" class="flex items-center p-2 text-gray-600 hover:bg-orange-50 rounded-lg">
+              <i class="fas fa-chart-bar mr-3"></i>
+              <span>Analytics & Reports</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Product Approval Content -->
+    <main class="flex-1 p-8">
+      <div class="flex justify-between items-center mb-6">
+        <h1 class="text-2xl font-bold">Product Approval</h1>
+        <div class="flex items-center space-x-2">
+          <select class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#F57224]">
+            <option>All Status</option>
+            <option>Pending</option>
+            <option>Approved</option>
+            <option>Rejected</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow overflow-hidden">
+        <!-- Pending Products -->
+        <div class="p-4 border-b border-gray-200">
+          <h2 class="text-lg font-semibold">Pending Approval (3)</h2>
+        </div>
+
+        <div class="divide-y divide-gray-200">
+          <!-- Product 1 -->
+          <div class="p-4 hover:bg-gray-50">
+            <div class="flex flex-col md:flex-row md:items-center">
+              <div class="md:w-1/6 mb-4 md:mb-0">
+                <img src="https://images.pexels.com/photos/19090/pexels-photo.jpg" 
+                     alt="Wireless Earbuds Pro" 
+                     class="w-full h-32 object-contain">
+              </div>
+              <div class="md:w-3/6 md:px-4">
+                <h3 class="font-medium">Wireless Earbuds Pro</h3>
+                <p class="text-sm text-gray-500 mb-2">Submitted by: Tech Gadgets BD</p>
+                <p class="text-sm">High-quality wireless earbuds with noise cancellation and 20hrs battery life...</p>
+                <div class="flex flex-wrap gap-2 mt-2">
+                  <span class="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-xs">Electronics</span>
+                  <span class="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs">Audio</span>
+                </div>
+              </div>
+              <div class="md:w-2/6 mt-4 md:mt-0">
+                <div class="flex flex-col space-y-2">
+                  <div class="flex justify-between">
+                    <span class="text-gray-500">Price:</span>
+                    <span class="font-medium">৳3,999</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-500">Stock:</span>
+                    <span>50 units</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-500">Submitted:</span>
+                    <span>Today, 10:30 AM</span>
+                  </div>
+                  <div class="flex space-x-2 pt-2">
+                    <button class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg">
+                      <i class="fas fa-check mr-1"></i> Approve
+                    </button>
+                    <button class="flex-1 bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-lg">
+                      <i class="fas fa-times mr-1"></i> Reject
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="p-4 hover:bg-gray-50">
+            <div class="flex flex-col md:flex-row md:items-center">
+              <div class="md:w-1/6 mb-4 md:mb-0">
+                <img src="https://images.pexels.com/photos/1275929/pexels-photo-1275929.jpeg" 
+                     alt="Smart Watch 4" 
+                     class="w-full h-32 object-contain">
+              </div>
+              <div class="md:w-3/6 md:px-4">
+                <h3 class="font-medium">Smart Watch 4</h3>
+                <p class="text-sm text-gray-500 mb-2">Submitted by: Electro World</p>
+                <p class="text-sm">Fitness tracker with heart rate monitor, GPS, and 7-day battery life...</p>
+                <div class="flex flex-wrap gap-2 mt-2">
+                  <span class="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-xs">Electronics</span>
+                  <span class="bg-purple-100 text-purple-600 px-2 py-1 rounded-full text-xs">Wearables</span>
+                </div>
+              </div>
+              <div class="md:w-2/6 mt-4 md:mt-0">
+                <div class="flex flex-col space-y-2">
+                  <div class="flex justify-between">
+                    <span class="text-gray-500">Price:</span>
+                    <span class="font-medium">৳5,999</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-500">Stock:</span>
+                    <span>25 units</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-500">Submitted:</span>
+                    <span>Yesterday, 4:15 PM</span>
+                  </div>
+                  <div class="flex space-x-2 pt-2">
+                    <button class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg">
+                      <i class="fas fa-check mr-1"></i> Approve
+                    </button>
+                    <button class="flex-1 bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-lg">
+                      <i class="fas fa-times mr-1"></i> Reject
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="p-4 hover:bg-gray-50">
+            <div class="flex flex-col md:flex-row md:items-center">
+              <div class="md:w-1/6 mb-4 md:mb-0">
+                <img src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg" 
+                     alt="Running Shoes" 
+                     class="w-full h-32 object-contain">
+              </div>
+              <div class="md:w-3/6 md:px-4">
+                <h3 class="font-medium">Running Shoes - Sports Edition</h3>
+                <p class="text-sm text-gray-500 mb-2">Submitted by: Sports Gear BD</p>
+                <p class="text-sm">Lightweight running shoes with cushioned soles and breathable fabric...</p>
+                <div class="flex flex-wrap gap-2 mt-2">
+                  <span class="bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full text-xs">Sports</span>
+                  <span class="bg-red-100 text-red-600 px-2 py-1 rounded-full text-xs">Footwear</span>
+                </div>
+              </div>
+              <div class="md:w-2/6 mt-4 md:mt-0">
+                <div class="flex flex-col space-y-2">
+                  <div class="flex justify-between">
+                    <span class="text-gray-500">Price:</span>
+                    <span class="font-medium">৳1,799</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-500">Stock:</span>
+                    <span>100 units</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-500">Submitted:</span>
+                    <span>2 days ago</span>
+                  </div>
+                  <div class="flex space-x-2 pt-2">
+                    <button class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg">
+                      <i class="fas fa-check mr-1"></i> Approve
+                    </button>
+                    <button class="flex-1 bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-lg">
+                      <i class="fas fa-times mr-1"></i> Reject
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex items-center justify-between p-4 border-t border-gray-200">
+          <div class="text-sm text-gray-500">
+            Showing 1 to 3 of 3 entries
+          </div>
+          <div class="flex space-x-1">
+            <button class="px-3 py-1 border border-gray-300 rounded text-gray-500 bg-gray-100">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="px-3 py-1 border border-[#F57224] rounded bg-[#F57224] text-white">
+              1
+            </button>
+            <button class="px-3 py-1 border border-gray-300 rounded text-gray-500 hover:bg-gray-50">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Function to approve product
+    function approveProduct(productId) {
+      // Implementation would go here
+      alert(`Product ${productId} approved successfully!`);
+    }
+
+    // Function to reject product
+    function rejectProduct(productId) {
+      // Implementation would go here
+      alert(`Product ${productId} rejected!`);
+    }
+  </script>
+</body>
+</html>
