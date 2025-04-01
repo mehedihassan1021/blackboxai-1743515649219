@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Daraz Clone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+  <!-- Admin Header -->
+  <header class="bg-[#F57224] text-white sticky top-0 z-50 shadow-md">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <a href="index.html" class="text-2xl font-bold">Daraz Admin</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="#" class="hover:text-yellow-200">
+            <i class="fas fa-bell"></i>
+          </a>
+          <a href="#" class="hover:text-yellow-200">
+            <i class="fas fa-user-circle"></i>
+          </a>
+          <a href="login.html" class="hover:text-yellow-200">
+            <i class="fas fa-sign-out-alt"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="flex">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow h-screen sticky top-16">
+      <nav class="p-4">
+        <ul class="space-y-2">
+          <li>
+            <a href="admin-dashboard.html" class="flex items-center p-2 text-[#F57224] bg-orange-50 rounded-lg">
+              <i class="fas fa-tachometer-alt mr-3"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="user-management.html" class="flex items-center p-2 text-gray-600 hover:bg-orange-50 rounded-lg">
+              <i class="fas fa-users mr-3"></i>
+              <span>User Management</span>
+            </a>
+          </li>
+          <li>
+            <a href="product-approval.html" class="flex items-center p-2 text-gray-600 hover:bg-orange-50 rounded-lg">
+              <i class="fas fa-check-circle mr-3"></i>
+              <span>Product Approval</span>
+            </a>
+          </li>
+          <li>
+            <a href="system-settings.html" class="flex items-center p-2 text-gray-600 hover:bg-orange-50 rounded-lg">
+              <i class="fas fa-cog mr-3"></i>
+              <span>System Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="analytics.html" class="flex items-center p-2 text-gray-600 hover:bg-orange-50 rounded-lg">
+              <i class="fas fa-chart-bar mr-3"></i>
+              <span>Analytics & Reports</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Dashboard Content -->
+    <main class="flex-1 p-8">
+      <h1 class="text-2xl font-bold mb-6">Admin Dashboard</h1>
+      
+      <!-- Stats Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+        <div class="bg-white rounded-lg shadow p-6">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-gray-500">Total Sales</p>
+              <p class="text-2xl font-bold">৳1,245,600</p>
+              <p class="text-sm text-green-600">↑ 12% from last month</p>
+            </div>
+            <div class="bg-green-100 text-green-600 p-3 rounded-full">
+              <i class="fas fa-chart-line text-xl"></i>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow p-6">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-gray-500">Total Orders</p>
+              <p class="text-2xl font-bold">1,286</p>
+              <p class="text-sm text-green-600">↑ 8% from last month</p>
+            </div>
+            <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+              <i class="fas fa-shopping-bag text-xl"></i>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow p-6">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-gray-500">Active Users</p>
+              <p class="text-2xl font-bold">8,642</p>
+              <p class="text-sm text-green-600">↑ 5% from last month</p>
+            </div>
+            <div class="bg-purple-100 text-purple-600 p-3 rounded-full">
+              <i class="fas fa-users text-xl"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-gray-500">Pending Approvals</p>
+              <p class="text-2xl font-bold">24</p>
+              <p class="text-sm text-red-600">Requires attention</p>
+            </div>
+            <div class="bg-red-100 text-red-600 p-3 rounded-full">
+              <i class="fas fa-exclamation-circle text-xl"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+        <!-- Recent Orders -->
+        <div class="bg-white rounded-lg shadow p-6 lg:col-span-2">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-bold">Recent Orders</h2>
+            <a href="orders.html" class="text-[#F57224] hover:underline">View All</a>
+          </div>
+          
+          <div class="overflow-x-auto">
+            <table class="min-w-full">
+              <thead>
+                <tr class="border-b border-gray-200">
+                  <th class="text-left py-2">Order ID</th>
+                  <th class="text-left py-2">Customer</th>
+                  <th class="text-left py-2">Amount</th>
+                  <th class="text-left py-2">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-gray-200">
+                  <td class="py-3">#ORD-2101</td>
+                  <td class="py-3">Ahmed Rahman</td>
+                  <td class="py-3">৳12,999</td>
+                  <td class="py-3">
+                    <span class="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs">Delivered</span>
+                  </td>
+                </tr>
+                <tr class="border-b border-gray-200">
+                  <td class="py-3">#ORD-2100</td>
+                  <td class="py-3">Fatima Khan</td>
+                  <td class="py-3">৳8,499</td>
+                  <td class="py-3">
+                    <span class="bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full text-xs">Shipped</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-3">#ORD-2099</td>
+                  <td class="py-3">Jamal Hossain</td>
+                  <td class="py-3">৳15,999</td>
+                  <td class="py-3">
+                    <span class="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-xs">Processing</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Recent Users -->
+        <div class="bg-white rounded-lg shadow p-6">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-bold">Recent Users</h2>
+            <a href="user-management.html" class="text-[#F57224] hover:underline">View All</a>
+          </div>
+          
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" 
+                   alt="User" 
+                   class="w-10 h-10 rounded-full mr-3">
+              <div>
+                <p class="font-medium">Ahmed Rahman</p>
+                <p class="text-sm text-gray-500">Customer</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" 
+                   alt="User" 
+                   class="w-10 h-10 rounded-full mr-3">
+              <div>
+                <p class="font-medium">Fatima Khan</p>
+                <p class="text-sm text-gray-500">Store Manager</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <img src="https://randomuser.me/api/portraits/men/75.jpg" 
+                   alt="User" 
+                   class="w-10 h-10 rounded-full mr-3">
+              <div>
+                <p class="font-medium">Jamal Hossain</p>
+                <p class="text-sm text-gray-500">Customer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sales Chart -->
+      <div class="bg-white rounded-lg shadow p-6 mb-8">
+        <h2 class="text-xl font-bold mb-4">Sales Analytics</h2>
+        <div class="h-64 bg-gray-100 rounded-lg flex items-center justify-center">
+          <p class="text-gray-500">Sales chart visualization will be displayed here</p>
+        </div>
+      </div>
+
+      <!-- Pending Approvals -->
+      <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-xl font-bold mb-4">Pending Approvals</h2>
+        <div class="overflow-x-auto">
+          <table class="min-w-full">
+            <thead>
+              <tr class="border-b border-gray-200">
+                <th class="text-left py-2">Product</th>
+                <th class="text-left py-2">Submitted By</th>
+                <th class="text-left py-2">Date</th>
+                <th class="text-left py-2">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-gray-200">
+                <td class="py-3">
+                  <div class="flex items-center">
+                    <img src="https://images.pexels.com/photos/19090/pexels-photo.jpg" 
+                         alt="Product" 
+                         class="w-10 h-10 object-contain mr-3">
+                    <span>Wireless Earbuds Pro</span>
+                  </div>
+                </td>
+                <td class="py-3">Tech Gadgets BD</td>
+                <td class="py-3">Today, 10:30 AM</td>
+                <td class="py-3">
+                  <div class="flex space-x-2">
+                    <button class="text-green-500 hover:text-green-700">
+                      <i class="fas fa-check"></i> Approve
+                    </button>
+                    <button class="text-red-500 hover:text-red-700">
+                      <i class="fas fa-times"></i> Reject
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3">
+                  <div class="flex items-center">
+                    <img src="https://images.pexels.com/photos/1275929/pexels-photo-1275929.jpeg" 
+                         alt="Product" 
+                         class="w-10 h-10 object-contain mr-3">
+                    <span>Smart Watch 4</span>
+                  </div>
+                </td>
+                <td class="py-3">Electro World</td>
+                <td class="py-3">Yesterday, 4:15 PM</td>
+                <td class="py-3">
+                  <div class="flex space-x-2">
+                    <button class="text-green-500 hover:text-green-700">
+                      <i class="fas fa-check"></i> Approve
+                    </button>
+                    <button class="text-red-500 hover:text-red-700">
+                      <i class="fas fa-times"></i> Reject
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Any necessary scripts can be added here
+  </script>
+</body>
+</html>
