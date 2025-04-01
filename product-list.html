@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Daraz Clone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+  <!-- Include Header -->
+  <div id="header"></div>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-6">
+    <div class="flex flex-col md:flex-row gap-6">
+      <!-- Sidebar Filters -->
+      <aside class="w-full md:w-64 bg-white p-4 rounded-lg shadow">
+        <h3 class="font-bold text-lg mb-4">Filters</h3>
+        
+        <!-- Price Range -->
+        <div class="mb-6">
+          <h4 class="font-semibold mb-2">Price Range</h4>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-sm">৳0</span>
+            <span class="text-sm">৳50,000</span>
+          </div>
+          <input type="range" min="0" max="50000" value="50000" 
+                 class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+          <div class="flex justify-between mt-2">
+            <input type="number" placeholder="Min" class="w-20 p-1 border rounded">
+            <span class="self-center">to</span>
+            <input type="number" placeholder="Max" class="w-20 p-1 border rounded">
+          </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="mb-6">
+          <h4 class="font-semibold mb-2">Categories</h4>
+          <ul class="space-y-2">
+            <li>
+              <label class="flex items-center">
+                <input type="checkbox" class="mr-2">
+                <span>Electronics</span>
+              </label>
+            </li>
+            <li>
+              <label class="flex items-center">
+                <input type="checkbox" class="mr-2" checked>
+                <span>Mobile Accessories</span>
+              </label>
+            </li>
+            <li>
+              <label class="flex items-center">
+                <input type="checkbox" class="mr-2">
+                <span>Laptops</span>
+              </label>
+            </li>
+            <li>
+              <label class="flex items-center">
+                <input type="checkbox" class="mr-2">
+                <span>Cameras</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Brands -->
+        <div class="mb-6">
+          <h4 class="font-semibold mb-2">Brands</h4>
+          <ul class="space-y-2">
+            <li>
+              <label class="flex items-center">
+                <input type="checkbox" class="mr-2">
+                <span>Samsung</span>
+              </label>
+            </li>
+            <li>
+              <label class="flex items-center">
+                <input type="checkbox" class="mr-2" checked>
+                <span>Xiaomi</span>
+              </label>
+            </li>
+            <li>
+              <label class="flex items-center">
+                <input type="checkbox" class="mr-2">
+                <span>Apple</span>
+              </label>
+            </li>
+            <li>
+              <label class="flex items-center">
+                <input type="checkbox" class="mr-2">
+                <span>Oppo</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <button class="w-full bg-[#F57224] text-white py-2 rounded hover:bg-orange-600">
+          Apply Filters
+        </button>
+      </aside>
+
+      <!-- Product Listing -->
+      <div class="flex-1">
+        <!-- Sorting and Results -->
+        <div class="bg-white p-4 rounded-lg shadow mb-4">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+            <p class="text-gray-600 mb-2 md:mb-0">1,248 results for "Mobile"</p>
+            <div class="flex items-center">
+              <span class="mr-2 text-gray-600">Sort by:</span>
+              <select class="border rounded p-2">
+                <option>Popularity</option>
+                <option selected>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                <option>Newest First</option>
+                <option>Customer Rating</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          <!-- Product 1 -->
+          <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+            <div class="relative">
+              <img src="https://images.pexels.com/photos/341523/pexels-photo-341523.jpeg" 
+                   alt="Smartphone" 
+                   class="w-full h-48 object-contain p-4">
+              <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">-20%</span>
+            </div>
+            <div class="p-4">
+              <h3 class="font-medium text-gray-800 mb-1">Xiaomi Redmi Note 10 Pro</h3>
+              <div class="flex items-center mb-2">
+                <div class="text-yellow-400 text-sm">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-gray-500 text-xs ml-1">(1,248)</span>
+              </div>
+              <div class="flex items-center">
+                <span class="text-lg font-bold text-[#F57224]">৳24,999</span>
+                <span class="text-sm text-gray-500 line-through ml-2">৳29,999</span>
+              </div>
+              <div class="mt-2 text-green-600 text-sm">
+                <i class="fas fa-truck"></i> Free Delivery
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+            <div class="relative">
+              <img src="https://images.pexels.com/photos/47261/pexels-photo-47261.jpeg" 
+                   alt="Smartphone" 
+                   class="w-full h-48 object-contain p-4">
+              <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">-15%</span>
+            </div>
+            <div class="p-4">
+              <h3 class="font-medium text-gray-800 mb-1">Samsung Galaxy A52</h3>
+              <div class="flex items-center mb-2">
+                <div class="text-yellow-400 text-sm">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="text-gray-500 text-xs ml-1">(892)</span>
+              </div>
+              <div class="flex items-center">
+                <span class="text-lg font-bold text-[#F57224]">৳29,999</span>
+                <span class="text-sm text-gray-500 line-through ml-2">৳34,999</span>
+              </div>
+              <div class="mt-2 text-green-600 text-sm">
+                <i class="fas fa-truck"></i> Free Delivery
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+            <div class="relative">
+              <img src="https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg" 
+                   alt="Smartphone" 
+                   class="w-full h-48 object-contain p-4">
+              <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">-10%</span>
+            </div>
+            <div class="p-4">
+              <h3 class="font-medium text-gray-800 mb-1">Oppo Reno 6</h3>
+              <div class="flex items-center mb-2">
+                <div class="text-yellow-400 text-sm">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="text-gray-500 text-xs ml-1">(1,503)</span>
+              </div>
+              <div class="flex items-center">
+                <span class="text-lg font-bold text-[#F57224]">৳32,999</span>
+                <span class="text-sm text-gray-500 line-through ml-2">৳36,999</span>
+              </div>
+              <div class="mt-2 text-green-600 text-sm">
+                <i class="fas fa-truck"></i> Free Delivery
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+            <div class="relative">
+              <img src="https://images.pexels.com/photos/163117/keypad-old-mobile-phone-telephone-163117.jpeg" 
+                   alt="Smartphone" 
+                   class="w-full h-48 object-contain p-4">
+              <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">-25%</span>
+            </div>
+            <div class="p-4">
+              <h3 class="font-medium text-gray-800 mb-1">Nokia 3310 (2023)</h3>
+              <div class="flex items-center mb-2">
+                <div class="text-yellow-400 text-sm">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-gray-500 text-xs ml-1">(2,147)</span>
+              </div>
+              <div class="flex items-center">
+                <span class="text-lg font-bold text-[#F57224]">৳3,999</span>
+                <span class="text-sm text-gray-500 line-through ml-2">৳4,999</span>
+              </div>
+              <div class="mt-2 text-green-600 text-sm">
+                <i class="fas fa-truck"></i> Free Delivery
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+            <div class="relative">
+              <img src="https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg" 
+                   alt="Smartphone" 
+                   class="w-full h-48 object-contain p-4">
+              <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">-30%</span>
+            </div>
+            <div class="p-4">
+              <h3 class="font-medium text-gray-800 mb-1">iPhone 12 Mini</h3>
+              <div class="flex items-center mb-2">
+                <div class="text-yellow-400 text-sm">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="text-gray-500 text-xs ml-1">(1,876)</span>
+              </div>
+              <div class="flex items-center">
+                <span class="text-lg font-bold text-[#F57224]">৳59,999</span>
+                <span class="text-sm text-gray-500 line-through ml-2">৳84,999</span>
+              </div>
+              <div class="mt-2 text-green-600 text-sm">
+                <i class="fas fa-truck"></i> Free Delivery
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+            <div class="relative">
+              <img src="https://images.pexels.com/photos/1275929/pexels-photo-1275929.jpeg" 
+                   alt="Smartphone" 
+                   class="w-full h-48 object-contain p-4">
+              <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">-18%</span>
+            </div>
+            <div class="p-4">
+              <h3 class="font-medium text-gray-800 mb-1">Realme 8 Pro</h3>
+              <div class="flex items-center mb-2">
+                <div class="text-yellow-400 text-sm">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="text-gray-500 text-xs ml-1">(1,432)</span>
+              </div>
+              <div class="flex items-center">
+                <span class="text-lg font-bold text-[#F57224]">৳22,999</span>
+                <span class="text-sm text-gray-500 line-through ml-2">৳27,999</span>
+              </div>
+              <div class="mt-2 text-green-600 text-sm">
+                <i class="fas fa-truck"></i> Free Delivery
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex justify-center mt-8">
+          <nav class="inline-flex rounded-md shadow">
+            <a href="#" class="px-3 py-2 rounded-l-md border border-gray-300 bg-white text-gray-500 hover:bg-gray-50">
+              <i class="fas fa-chevron-left"></i>
+            </a>
+            <a href="#" class="px-4 py-2 border-t border-b border-gray-300 bg-white text-[#F57224] font-medium">1</a>
+            <a href="#" class="px-4 py-2 border-t border-b border-gray-300 bg-white text-gray-500 hover:bg-gray-50">2</a>
+            <a href="#" class="px-4 py-2 border-t border-b border-gray-300 bg-white text-gray-500 hover:bg-gray-50">3</a>
+            <a href="#" class="px-4 py-2 border-t border-b border-gray-300 bg-white text-gray-500 hover:bg-gray-50">4</a>
+            <a href="#" class="px-4 py-2 border-t border-b border-gray-300 bg-white text-gray-500 hover:bg-gray-50">5</a>
+            <a href="#" class="px-3 py-2 rounded-r-md border border-gray-300 bg-white text-gray-500 hover:bg-gray-50">
+              <i class="fas fa-chevron-right"></i>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Include Footer -->
+  <div id="footer"></div>
+
+  <!-- JavaScript to load header and footer -->
+  <script>
+    // Load header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+
+    // Load footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
