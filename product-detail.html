@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details - Daraz Clone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+  <!-- Include Header -->
+  <div id="header"></div>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-6">
+    <!-- Breadcrumb -->
+    <div class="text-sm breadcrumbs mb-6">
+      <ul>
+        <li><a href="index.html">Home</a></li> 
+        <li><a href="product-list.html">Electronics</a></li> 
+        <li><a href="product-list.html">Mobile Phones</a></li> 
+        <li class="text-[#F57224]">Xiaomi Redmi Note 10 Pro</li>
+      </ul>
+    </div>
+
+    <!-- Product Detail Section -->
+    <div class="bg-white rounded-lg shadow p-6">
+      <div class="flex flex-col lg:flex-row gap-8">
+        <!-- Product Images -->
+        <div class="lg:w-1/2">
+          <!-- Main Image -->
+          <div class="mb-4 border rounded-lg overflow-hidden">
+            <img id="mainImage" src="https://images.pexels.com/photos/341523/pexels-photo-341523.jpeg" 
+                 alt="Xiaomi Redmi Note 10 Pro" 
+                 class="w-full h-96 object-contain">
+          </div>
+          
+          <!-- Thumbnail Gallery -->
+          <div class="flex space-x-2">
+            <img src="https://images.pexels.com/photos/341523/pexels-photo-341523.jpeg" 
+                 alt="Thumbnail 1" 
+                 class="w-16 h-16 object-cover border rounded cursor-pointer hover:border-[#F57224]"
+                 onclick="document.getElementById('mainImage').src=this.src">
+            <img src="https://images.pexels.com/photos/47261/pexels-photo-47261.jpeg" 
+                 alt="Thumbnail 2" 
+                 class="w-16 h-16 object-cover border rounded cursor-pointer hover:border-[#F57224]"
+                 onclick="document.getElementById('mainImage').src=this.src">
+            <img src="https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg" 
+                 alt="Thumbnail 3" 
+                 class="w-16 h-16 object-cover border rounded cursor-pointer hover:border-[#F57224]"
+                 onclick="document.getElementById('mainImage').src=this.src">
+            <img src="https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg" 
+                 alt="Thumbnail 4" 
+                 class="w-16 h-16 object-cover border rounded cursor-pointer hover:border-[#F57224]"
+                 onclick="document.getElementById('mainImage').src=this.src">
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="lg:w-1/2">
+          <h1 class="text-2xl font-bold text-gray-800 mb-2">Xiaomi Redmi Note 10 Pro (6GB RAM, 128GB ROM) - Onyx Gray</h1>
+          
+          <!-- Rating -->
+          <div class="flex items-center mb-4">
+            <div class="text-yellow-400 mr-2">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span class="text-gray-600 text-sm">1,248 Ratings</span>
+            <span class="mx-2 text-gray-400">|</span>
+            <span class="text-gray-600 text-sm">1,024 Sold</span>
+          </div>
+
+          <!-- Price -->
+          <div class="mb-6">
+            <div class="flex items-center">
+              <span class="text-3xl font-bold text-[#F57224]">৳24,999</span>
+              <span class="text-lg text-gray-500 line-through ml-2">৳29,999</span>
+              <span class="ml-2 bg-red-100 text-red-600 text-xs font-bold px-2 py-1 rounded">-17%</span>
+            </div>
+            <p class="text-green-600 text-sm mt-1">
+              <i class="fas fa-truck"></i> Free Delivery
+            </p>
+          </div>
+
+          <!-- Variants -->
+          <div class="mb-6">
+            <h3 class="font-semibold mb-2">Color:</h3>
+            <div class="flex space-x-2">
+              <button class="w-10 h-10 rounded-full bg-gray-800 border-2 border-[#F57224]"></button>
+              <button class="w-10 h-10 rounded-full bg-blue-600 border border-gray-300"></button>
+              <button class="w-10 h-10 rounded-full bg-purple-600 border border-gray-300"></button>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <h3 class="font-semibold mb-2">Storage:</h3>
+            <div class="flex space-x-2">
+              <button class="px-4 py-2 border border-gray-300 rounded hover:border-[#F57224] hover:text-[#F57224]">64GB</button>
+              <button class="px-4 py-2 border-2 border-[#F57224] text-[#F57224] rounded font-medium">128GB</button>
+              <button class="px-4 py-2 border border-gray-300 rounded hover:border-[#F57224] hover:text-[#F57224]">256GB</button>
+            </div>
+          </div>
+
+          <!-- Quantity -->
+          <div class="mb-6">
+            <h3 class="font-semibold mb-2">Quantity:</h3>
+            <div class="flex items-center">
+              <button class="w-8 h-8 border border-gray-300 rounded-l flex items-center justify-center">
+                <i class="fas fa-minus"></i>
+              </button>
+              <input type="number" value="1" min="1" 
+                     class="w-12 h-8 border-t border-b border-gray-300 text-center">
+              <button class="w-8 h-8 border border-gray-300 rounded-r flex items-center justify-center">
+                <i class="fas fa-plus"></i>
+              </button>
+              <span class="text-gray-500 text-sm ml-2">(12 available)</span>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row gap-3 mb-6">
+            <button class="flex-1 bg-[#F57224] hover:bg-orange-600 text-white py-3 px-6 rounded-lg font-bold">
+              <i class="fas fa-shopping-cart mr-2"></i> Add to Cart
+            </button>
+            <button class="flex-1 bg-yellow-500 hover:bg-yellow-600 text-white py-3 px-6 rounded-lg font-bold">
+              <i class="fas fa-bolt mr-2"></i> Buy Now
+            </button>
+          </div>
+
+          <!-- Delivery Info -->
+          <div class="border-t border-gray-200 pt-4">
+            <div class="flex items-start mb-2">
+              <i class="fas fa-truck text-gray-500 mt-1 mr-2"></i>
+              <div>
+                <p class="font-medium">Delivery</p>
+                <p class="text-sm text-gray-600">Free delivery to your doorstep by Tomorrow</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <i class="fas fa-shield-alt text-gray-500 mt-1 mr-2"></i>
+              <div>
+                <p class="font-medium">Warranty</p>
+                <p class="text-sm text-gray-600">1 Year Xiaomi Warranty</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Description -->
+      <div class="mt-8 pt-6 border-t border-gray-200">
+        <h2 class="text-xl font-bold mb-4">Product Description</h2>
+        <div class="prose max-w-none">
+          <h3 class="font-semibold">Xiaomi Redmi Note 10 Pro - Power Meets Style</h3>
+          <p>The Redmi Note 10 Pro comes with a 6.67" FHD+ AMOLED DotDisplay with 120Hz refresh rate, protected by Corning Gorilla Glass 5. Powered by Qualcomm Snapdragon 732G processor and Adreno 618 GPU, it delivers smooth performance for gaming and multitasking.</p>
+          
+          <h3 class="font-semibold mt-4">Key Features:</h3>
+          <ul class="list-disc pl-5">
+            <li>6.67" FHD+ AMOLED DotDisplay with 120Hz refresh rate</li>
+            <li>Qualcomm Snapdragon 732G processor</li>
+            <li>108MP quad camera setup with ultra-wide, macro and depth sensors</li>
+            <li>16MP in-display selfie camera</li>
+            <li>5020mAh battery with 33W fast charging</li>
+            <li>6GB RAM + 128GB storage (expandable up to 512GB)</li>
+            <li>Dual stereo speakers with Hi-Res Audio certification</li>
+            <li>Side-mounted fingerprint sensor</li>
+            <li>MIUI 12 based on Android 11</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Specifications -->
+      <div class="mt-8 pt-6 border-t border-gray-200">
+        <h2 class="text-xl font-bold mb-4">Specifications</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h3 class="font-semibold mb-2">General</h3>
+            <table class="w-full text-sm">
+              <tr class="border-b border-gray-200">
+                <td class="py-2 text-gray-600">Brand</td>
+                <td class="py-2 font-medium">Xiaomi</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-2 text-gray-600">Model</td>
+                <td class="py-2 font-medium">Redmi Note 10 Pro</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-2 text-gray-600">Release Date</td>
+                <td class="py-2 font-medium">March 2021</td>
+              </tr>
+            </table>
+          </div>
+
+          <div>
+            <h3 class="font-semibold mb-2">Display</h3>
+            <table class="w-full text-sm">
+              <tr class="border-b border-gray-200">
+                <td class="py-2 text-gray-600">Size</td>
+                <td class="py-2 font-medium">6.67 inches</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-2 text-gray-600">Resolution</td>
+                <td class="py-2 font-medium">2400 x 1080 pixels</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-2 text-gray-600">Refresh Rate</td>
+                <td class="py-2 font-medium">120Hz</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related Products -->
+    <div class="mt-12">
+      <h2 class="text-xl font-bold mb-6">You May Also Like</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+        <!-- Related Product 1 -->
+        <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+          <div class="relative">
+            <img src="https://images.pexels.com/photos/47261/pexels-photo-47261.jpeg" 
+                 alt="Samsung Galaxy A52" 
+                 class="w-full h-40 object-contain p-4">
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium text-gray-800 text-sm mb-1">Samsung Galaxy A52</h3>
+            <div class="flex items-center">
+              <span class="text-md font-bold text-[#F57224]">৳29,999</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Product 2 -->
+        <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+          <div class="relative">
+            <img src="https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg" 
+                 alt="Oppo Reno 6" 
+                 class="w-full h-40 object-contain p-4">
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium text-gray-800 text-sm mb-1">Oppo Reno 6</h3>
+            <div class="flex items-center">
+              <span class="text-md font-bold text-[#F57224]">৳32,999</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Product 3 -->
+        <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+          <div class="relative">
+            <img src="https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg" 
+                 alt="iPhone 12 Mini" 
+                 class="w-full h-40 object-contain p-4">
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium text-gray-800 text-sm mb-1">iPhone 12 Mini</h3>
+            <div class="flex items-center">
+              <span class="text-md font-bold text-[#F57224]">৳59,999</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Product 4 -->
+        <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+          <div class="relative">
+            <img src="https://images.pexels.com/photos/1275929/pexels-photo-1275929.jpeg" 
+                 alt="Realme 8 Pro" 
+                 class="w-full h-40 object-contain p-4">
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium text-gray-800 text-sm mb-1">Realme 8 Pro</h3>
+            <div class="flex items-center">
+              <span class="text-md font-bold text-[#F57224]">৳22,999</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Product 5 -->
+        <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+          <div class="relative">
+            <img src="https://images.pexels.com/photos/163117/keypad-old-mobile-phone-telephone-163117.jpeg" 
+                 alt="Nokia 3310" 
+                 class="w-full h-40 object-contain p-4">
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium text-gray-800 text-sm mb-1">Nokia 3310 (2023)</h3>
+            <div class="flex items-center">
+              <span class="text-md font-bold text-[#F57224]">৳3,999</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Include Footer -->
+  <div id="footer"></div>
+
+  <!-- JavaScript to load header and footer -->
+  <script>
+    // Load header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+
+    // Load footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
