@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Products - Daraz Seller</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+  <!-- Seller Header -->
+  <header class="bg-[#F57224] text-white sticky top-0 z-50 shadow-md">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <a href="index.html" class="text-2xl font-bold">Daraz Seller</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="#" class="hover:text-yellow-200">
+            <i class="fas fa-bell"></i>
+          </a>
+          <a href="#" class="hover:text-yellow-200">
+            <i class="fas fa-user-circle"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="flex">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow h-screen sticky top-16">
+      <nav class="p-4">
+        <ul class="space-y-2">
+          <li>
+            <a href="seller-dashboard.html" class="flex items-center p-2 text-gray-600 hover:bg-orange-50 rounded-lg">
+              <i class="fas fa-tachometer-alt mr-3"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="add-product.html" class="flex items-center p-2 text-gray-600 hover:bg-orange-50 rounded-lg">
+              <i class="fas fa-plus-circle mr-3"></i>
+              <span>Add Product</span>
+            </a>
+          </li>
+          <li>
+            <a href="products.html" class="flex items-center p-2 text-[#F57224] bg-orange-50 rounded-lg">
+              <i class="fas fa-boxes mr-3"></i>
+              <span>Products</span>
+            </a>
+          </li>
+          <li>
+            <a href="orders.html" class="flex items-center p-2 text-gray-600 hover:bg-orange-50 rounded-lg">
+              <i class="fas fa-shopping-bag mr-3"></i>
+              <span>Orders</span>
+            </a>
+          </li>
+          <li>
+            <a href="store-settings.html" class="flex items-center p-2 text-gray-600 hover:bg-orange-50 rounded-lg">
+              <i class="fas fa-cog mr-3"></i>
+              <span>Store Settings</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Products List -->
+    <main class="flex-1 p-8">
+      <div class="flex justify-between items-center mb-6">
+        <h1 class="text-2xl font-bold">Manage Products</h1>
+        <a href="add-product.html" class="bg-[#F57224] hover:bg-orange-600 text-white py-2 px-4 rounded-lg">
+          <i class="fas fa-plus mr-1"></i> Add Product
+        </a>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow overflow-hidden">
+        <!-- Filters -->
+        <div class="p-4 border-b border-gray-200">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div class="flex-1">
+              <input type="text" placeholder="Search products..." 
+                     class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#F57224]">
+            </div>
+            <div class="flex items-center space-x-2">
+              <select class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#F57224]">
+                <option>All Categories</option>
+                <option>Electronics</option>
+                <option>Fashion</option>
+                <option>Home & Living</option>
+              </select>
+              <select class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#F57224]">
+                <option>All Status</option>
+                <option>Active</option>
+                <option>Inactive</option>
+                <option>Out of Stock</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Products Table -->
+        <div class="overflow-x-auto">
+          <table class="min-w-full">
+            <thead>
+              <tr class="border-b border-gray-200 bg-gray-50">
+                <th class="text-left py-3 px-4">
+                  <input type="checkbox" class="rounded text-[#F57224] focus:ring-[#F57224]">
+                </th>
+                <th class="text-left py-3 px-4">Product</th>
+                <th class="text-left py-3 px-4">Category</th>
+                <th class="text-left py-3 px-4">Price</th>
+                <th class="text-left py-3 px-4">Stock</th>
+                <th class="text-left py-3 px-4">Status</th>
+                <th class="text-left py-3 px-4">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Product 1 -->
+              <tr class="border-b border-gray-200 hover:bg-gray-50">
+                <td class="py-4 px-4">
+                  <input type="checkbox" class="rounded text-[#F57224] focus:ring-[#F57224]">
+                </td>
+                <td class="py-4 px-4">
+                  <div class="flex items-center">
+                    <img src="https://images.pexels.com/photos/341523/pexels-photo-341523.jpeg" 
+                         alt="Xiaomi Redmi Note 10 Pro" 
+                         class="w-12 h-12 object-contain mr-3">
+                    <div>
+                      <p class="font-medium">Xiaomi Redmi Note 10 Pro</p>
+                      <p class="text-sm text-gray-500">SKU: XIA-001</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="text-gray-600">Electronics</span>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="font-medium">৳24,999</span>
+                  <span class="text-sm text-gray-500 line-through">৳29,999</span>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="font-medium">42</span>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs">Active</span>
+                </td>
+                <td class="py-4 px-4">
+                  <div class="flex space-x-2">
+                    <a href="#" class="text-blue-500 hover:text-blue-700">
+                      <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="#" class="text-red-500 hover:text-red-700">
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Product 2 -->
+              <tr class="border-b border-gray-200 hover:bg-gray-50">
+                <td class="py-4 px-4">
+                  <input type="checkbox" class="rounded text-[#F57224] focus:ring-[#F57224]">
+                </td>
+                <td class="py-4 px-4">
+                  <div class="flex items-center">
+                    <img src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg" 
+                         alt="Wireless Headphones" 
+                         class="w-12 h-12 object-contain mr-3">
+                    <div>
+                      <p class="font-medium">Wireless Bluetooth Headphones</p>
+                      <p class="text-sm text-gray-500">SKU: HP-001</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="text-gray-600">Electronics</span>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="font-medium">৳2,499</span>
+                  <span class="text-sm text-gray-500 line-through">৳2,999</span>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="font-medium">18</span>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs">Active</span>
+                </td>
+                <td class="py-4 px-4">
+                  <div class="flex space-x-2">
+                    <a href="#" class="text-blue-500 hover:text-blue-700">
+                      <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="#" class="text-red-500 hover:text-red-700">
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Product 3 -->
+              <tr class="border-b border-gray-200 hover:bg-gray-50">
+                <td class="py-4 px-4">
+                  <input type="checkbox" class="rounded text-[#F57224] focus:ring-[#F57224]">
+                </td>
+                <td class="py-4 px-4">
+                  <div class="flex items-center">
+                    <img src="https://images.pexels.com/photos/1036857/pexels-photo-1036857.jpeg" 
+                         alt="Smart Watch" 
+                         class="w-12 h-12 object-contain mr-3">
+                    <div>
+                      <p class="font-medium">Smart Watch 3 - Fitness Tracker</p>
+                      <p class="text-sm text-gray-500">SKU: SW-001</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="text-gray-600">Electronics</span>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="font-medium">৳3,999</span>
+                  <span class="text-sm text-gray-500 line-through">৳5,699</span>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="font-medium">0</span>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="bg-red-100 text-red-600 px-2 py-1 rounded-full text-xs">Out of Stock</span>
+                </td>
+                <td class="py-4 px-4">
+                  <div class="flex space-x-2">
+                    <a href="#" class="text-blue-500 hover:text-blue-700">
+                      <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="#" class="text-red-500 hover:text-red-700">
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Product 4 -->
+              <tr class="hover:bg-gray-50">
+                <td class="py-4 px-4">
+                  <input type="checkbox" class="rounded text-[#F57224] focus:ring-[#F57224]">
+                </td>
+                <td class="py-4 px-4">
+                  <div class="flex items-center">
+                    <img src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg" 
+                         alt="Running Shoes" 
+                         class="w-12 h-12 object-contain mr-3">
+                    <div>
+                      <p class="font-medium">Running Shoes - Sports Edition</p>
+                      <p class="text-sm text-gray-500">SKU: SH-001</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="text-gray-600">Fashion</span>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="font-medium">৳1,799</span>
+                  <span class="text-sm text-gray-500 line-through">৳2,399</span>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="font-medium">7</span>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full text-xs">Low Stock</span>
+                </td>
+                <td class="py-4 px-4">
+                  <div class="flex space-x-2">
+                    <a href="#" class="text-blue-500 hover:text-blue-700">
+                      <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="#" class="text-red-500 hover:text-red-700">
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex items-center justify-between p-4 border-t border-gray-200">
+          <div class="text-sm text-gray-500">
+            Showing 1 to 4 of 4 entries
+          </div>
+          <div class="flex space-x-1">
+            <button class="px-3 py-1 border border-gray-300 rounded text-gray-500 bg-gray-100">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="px-3 py-1 border border-[#F57224] rounded bg-[#F57224] text-white">
+              1
+            </button>
+            <button class="px-3 py-1 border border-gray-300 rounded text-gray-500 hover:bg-gray-50">
+              2
+            </button>
+            <button class="px-3 py-1 border border-gray-300 rounded text-gray-500 hover:bg-gray-50">
+              3
+            </button>
+            <button class="px-3 py-1 border border-gray-300 rounded text-gray-500 hover:bg-gray-50">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Any necessary scripts can be added here
+  </script>
+</body>
+</html>
