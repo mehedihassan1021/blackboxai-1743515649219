@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daraz Clone - Online Shopping in Bangladesh</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+  <!-- Include Header -->
+  <div id="header"></div>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-6">
+    <!-- Hero Banner -->
+    <div class="relative rounded-lg overflow-hidden mb-8 h-64 md:h-96">
+      <img src="https://images.pexels.com/photos/19090/pexels-photo.jpg" 
+           alt="Shopping Banner" 
+           class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+        <div class="text-center text-white px-4">
+          <h1 class="text-3xl md:text-5xl font-bold mb-4">Great Deals Await You!</h1>
+          <p class="text-lg mb-6">Shop the best products at amazing prices</p>
+          <a href="product-list.html" 
+             class="bg-[#F57224] hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-full">
+            Shop Now
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Categories Grid -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-6">Shop by Category</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <a href="product-list.html" class="bg-white rounded-lg shadow p-4 text-center hover:shadow-lg transition">
+          <div class="w-16 h-16 mx-auto mb-2">
+            <img src="https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg" 
+                 alt="Electronics" 
+                 class="w-full h-full object-contain">
+          </div>
+          <span class="font-medium">Electronics</span>
+        </a>
+        <a href="product-list.html" class="bg-white rounded-lg shadow p-4 text-center hover:shadow-lg transition">
+          <div class="w-16 h-16 mx-auto mb-2">
+            <img src="https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg" 
+                 alt="Fashion" 
+                 class="w-full h-full object-contain">
+          </div>
+          <span class="font-medium">Fashion</span>
+        </a>
+        <a href="product-list.html" class="bg-white rounded-lg shadow p-4 text-center hover:shadow-lg transition">
+          <div class="w-16 h-16 mx-auto mb-2">
+            <img src="https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg" 
+                 alt="Home" 
+                 class="w-full h-full object-contain">
+          </div>
+          <span class="font-medium">Home</span>
+        </a>
+        <a href="product-list.html" class="bg-white rounded-lg shadow p-4 text-center hover:shadow-lg transition">
+          <div class="w-16 h-16 mx-auto mb-2">
+            <img src="https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg" 
+                 alt="Beauty" 
+                 class="w-full h-full object-contain">
+          </div>
+          <span class="font-medium">Beauty</span>
+        </a>
+        <a href="product-list.html" class="bg-white rounded-lg shadow p-4 text-center hover:shadow-lg transition">
+          <div class="w-16 h-16 mx-auto mb-2">
+            <img src="https://images.pexels.com/photos/3962285/pexels-photo-3962285.jpeg" 
+                 alt="Groceries" 
+                 class="w-full h-full object-contain">
+          </div>
+          <span class="font-medium">Groceries</span>
+        </a>
+        <a href="product-list.html" class="bg-white rounded-lg shadow p-4 text-center hover:shadow-lg transition">
+          <div class="w-16 h-16 mx-auto mb-2">
+            <img src="https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg" 
+                 alt="Toys" 
+                 class="w-full h-full object-contain">
+          </div>
+          <span class="font-medium">Toys</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Daily Deals -->
+    <section class="mb-12">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-bold">Daily Deals</h2>
+        <a href="#" class="text-[#F57224] hover:underline">View All</a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <!-- Product Card 1 -->
+        <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+          <div class="relative">
+            <img src="https://images.pexels.com/photos/341523/pexels-photo-341523.jpeg" 
+                 alt="Smartphone" 
+                 class="w-full h-48 object-contain p-4">
+            <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">-20%</span>
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium text-gray-800 mb-1">Smartphone X Pro</h3>
+            <div class="flex items-center mb-2">
+              <div class="text-yellow-400 text-sm">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="text-gray-500 text-xs ml-1">(42)</span>
+            </div>
+            <div class="flex items-center">
+              <span class="text-lg font-bold text-[#F57224]">৳12,999</span>
+              <span class="text-sm text-gray-500 line-through ml-2">৳15,999</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product Card 2 -->
+        <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+          <div class="relative">
+            <img src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg" 
+                 alt="Headphones" 
+                 class="w-full h-48 object-contain p-4">
+            <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">-15%</span>
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium text-gray-800 mb-1">Wireless Headphones</h3>
+            <div class="flex items-center mb-2">
+              <div class="text-yellow-400 text-sm">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <span class="text-gray-500 text-xs ml-1">(28)</span>
+            </div>
+            <div class="flex items-center">
+              <span class="text-lg font-bold text-[#F57224]">৳2,499</span>
+              <span class="text-sm text-gray-500 line-through ml-2">৳2,999</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product Card 3 -->
+        <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+          <div class="relative">
+            <img src="https://images.pexels.com/photos/1036857/pexels-photo-1036857.jpeg" 
+                 alt="Watch" 
+                 class="w-full h-48 object-contain p-4">
+            <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">-30%</span>
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium text-gray-800 mb-1">Smart Watch 3</h3>
+            <div class="flex items-center mb-2">
+              <div class="text-yellow-400 text-sm">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="text-gray-500 text-xs ml-1">(56)</span>
+            </div>
+            <div class="flex items-center">
+              <span class="text-lg font-bold text-[#F57224]">৳3,999</span>
+              <span class="text-sm text-gray-500 line-through ml-2">৳5,699</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product Card 4 -->
+        <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+          <div class="relative">
+            <img src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg" 
+                 alt="Shoes" 
+                 class="w-full h-48 object-contain p-4">
+            <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">-25%</span>
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium text-gray-800 mb-1">Running Shoes</h3>
+            <div class="flex items-center mb-2">
+              <div class="text-yellow-400 text-sm">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="text-gray-500 text-xs ml-1">(34)</span>
+            </div>
+            <div class="flex items-center">
+              <span class="text-lg font-bold text-[#F57224]">৳1,799</span>
+              <span class="text-sm text-gray-500 line-through ml-2">৳2,399</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product Card 5 -->
+        <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+          <div class="relative">
+            <img src="https://images.pexels.com/photos/264547/pexels-photo-264547.jpeg" 
+                 alt="Backpack" 
+                 class="w-full h-48 object-contain p-4">
+            <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">-10%</span>
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium text-gray-800 mb-1">Travel Backpack</h3>
+            <div class="flex items-center mb-2">
+              <div class="text-yellow-400 text-sm">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <span class="text-gray-500 text-xs ml-1">(19)</span>
+            </div>
+            <div class="flex items-center">
+              <span class="text-lg font-bold text-[#F57224]">৳1,349</span>
+              <span class="text-sm text-gray-500 line-through ml-2">৳1,499</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Include Footer -->
+  <div id="footer"></div>
+
+  <!-- JavaScript to load header and footer -->
+  <script>
+    // Load header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+
+    // Load footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
